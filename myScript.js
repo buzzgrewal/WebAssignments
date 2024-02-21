@@ -1,187 +1,51 @@
-function redirectWithDelay() {
-    const redirectUrl = 'none.html'; 
-    const delay = 2000; 
+function calculate()
+{
+    var num1 = document.getElementById('input1').value;
+    var num2 = document.getElementById('input2').value;
 
-    setTimeout(function() {
-        window.location.href = redirectUrl;
-    }, delay);
+
+    let add = parseInt(num1) + parseInt(num2);
+    let sub = parseInt(num1) - parseInt(num2);
+    let mul = parseInt(num1) * parseInt(num2);
+    let div = parseInt(num1) / parseInt(num2);
+
+    document.getElementById('add').innerHTML = add;
+    document.getElementById('sub').innerHTML = sub;
+    document.getElementById('mul').innerHTML = mul;
+    document.getElementById('div').innerHTML = div;
+
+
 }
 
-function validateinputs()
+function giveNoofDays()
 {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    
-    event.preventDefault();
+    const Days= [31,28,31,30,31,30,31,31,30,31,30,31];
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    let month = document.getElementById('month').value;
 
-
-
-    if (username == "" || password == "") 
+    for(let i=0;i<months.length;i++)
     {
-        alert("Username and password must be filled out");
-        return false;
+        if(months[i] === month)
+        {
+            document.getElementById('dem').innerHTML = months[i];
+            document.getElementById('days').innerHTML = Days[i];
+            break;
+        }
     }
 
 
-
-    var usernamePattern = /^[a-zA-Z]\w+$/;
-    if (!usernamePattern.test(username)) 
-    {
-        document.getElementById("error").innerHTML = "Invalid Username";
-        alert("Username must start with a letter and only contain letters, numbers and underscores")
-        return false;
-    }
-
-
-
-   
-    var passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/;
-    if (!passwordPattern.test(password)) 
-    {
-        document.getElementById("error").innerHTML = "Invalid Password";
-        alert("Password must be at least 8 characters long and contain at least one letter,one number and one special character")
-        return false;
-    }
-
-
-    document.getElementById("error").innerHTML = "";
-    document.getElementById("success").innerHTML = "Welcome to the site!";
-
-    redirectWithDelay();
-    return true;
-
-    
 }
 
-
-
-
-function validatesignup()
+function printTable()
 {
-    event.preventDefault();
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    var confirmpassword = document.getElementById("confirmpassword").value;
-    var gender = document.getElementById("genders").value;
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-    var dob = document.getElementById("dataofbirth").value;
-    var address = document.getElementById("address").value;
-    var country = document.getElementById("country").value;
+    let temp = document.getElementById('number1').value;
+    let num = parseInt(temp);
 
 
-
-    if (username == "" || password == "" || confirmpassword
-        == "")
+    for(let i=1;i<=10;i++)
     {
-        alert("Username and password must be filled out");
-        return false;
+        document.getElementById('tab').innerHTML += num + " * " + i + " = " + num*i + "<br>";
     }
-
-
-    var usernamePattern = /^[a-zA-Z]\w+$/;
-    if (!usernamePattern.test(username)) 
-    {
-        document.getElementById("error").innerHTML = "Invalid Username";
-        alert("Username must start with a letter and only contain letters, numbers and underscores")
-        return false;
-    }
-
-    var passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/;
-    if (!passwordPattern.test(password)) 
-    {
-        document.getElementById("error").innerHTML = "Invalid Password";
-        alert("Password must be at least 8 characters long and contain at least one letter,one number and one special character")
-        return false;
-    }
-
-    if (password != confirmpassword)
-    {
-        document.getElementById("error").innerHTML = "Passwords do not match";
-        alert("Passwords do not match");
-        return false;
-    }
-
-    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email)) 
-    {
-        document.getElementById("error").innerHTML = "Invalid Email";
-        alert("Invalid Email");
-        return false;
-    }
-
-    var phonePattern = /^\d{11}$/;
-    if (!phonePattern.test(phone)) 
-    {
-        document.getElementById("error").innerHTML = "Invalid Phone Number";
-        alert("Invalid Phone Number");
-        return false;
-    }
-
-    let today = new Date();
-    let birthDate = new Date(dob);
-    let age = today.getFullYear() - birthDate.getFullYear();
-    if (dob == "")
-    {
-        document.getElementById("error").innerHTML = "Invalid Date of Birth";
-        alert("Invalid Date of Birth");
-        return false;
-    }
-    else if (age<18)
-    {
-        document.getElementById("error").innerHTML = "You must be 18 years old to sign up";
-        alert("You must be 18 years old to sign up");
-        return false;
-    }
-
-    if (address == "")
-    {
-        document.getElementById("error").innerHTML = "Invalid Address";
-        alert("Invalid Address");
-        return false;
-    }
-
-    if (country == "")
-    {
-        document.getElementById("error").innerHTML = "Invalid Country";
-        alert("Invalid Country");
-        return false;
-    }
-
-
-    if(gender == "Select")
-    {
-        document.getElementById("error").innerHTML = "Invalid Gender";
-        alert("Please select one of the option");
-        return false;
-    }
-
-    document.getElementById("error").innerHTML = "";
-    document.getElementById("success").innerHTML = "Sign up successful!. Welcome to the site!";
-    redirectWithDelay();
-    return true;
-
-
-
-
 
     
-
-    
-}
-
-function resetbtn()
-{
-    document.getElementById("error").innerHTML = "";
-    document.getElementById("success").innerHTML = "";
-    document.getElementById("username").value = "";
-    document.getElementById("password").value = "";
-    document.getElementById("confirmpassword").value = "";
-    document.getElementById(genders).value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("phone").value = "";
-    document.getElementById("dataofbirth").value = "";
-    document.getElementById("address").value = "";
-    document.getElementById("country").value = "";
-
 }

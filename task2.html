@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
     <link rel="icon" type="png"  href="https://www.iconpacks.net/icons/1/free-user-login-icon-305-thumb.png">
+    <script src="/myScript.js"></script>
 
     <style>
         body{
             background-image: url(https://preview.redd.it/clean-black-wallpaper-1920x1080-v0-3764zpt69h891.jpg?width=1080&crop=smart&auto=webp&s=593e47425f2e47fdabb4a4672d1ccb568ee1a954);
-            background-size: cover;
+
             background-position-y: -85px;
 
         }
@@ -36,9 +37,9 @@
             text-align: center;
 
             background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
             border-radius: 10px;
             padding: 20px;
+            filter: drop-shadow(0.75rem 0 0.75rem rgb(82, 82, 82));
 
            
             
@@ -100,7 +101,7 @@
             justify-content: center;
             display: flex;
             position: absolute;
-            top: 81%;
+            top: 85%;
             left: 50%;
             transform: translate(-50%, -50%);
             padding: 10px;
@@ -147,6 +148,8 @@
           form {
             background: linear-gradient(to bottom, #000000, #5c5c5c); 
            }
+
+        
                      
         
 
@@ -158,12 +161,18 @@
         
         <form>
             <h2>Log in</h2>
+            <p id="error" style="color: red;"></p>
+            <p id="success" style="color: green;"></p>
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" placeholder="buzzgrewal" required><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" placeholder="*******" required><br><br>
+           
             
-            <input type="submit" value="Log in" onclick="alert('You have logged in!')">
+            <input type="submit" value="Log in" class="loginbtn" onclick="validateinputs()" ></input>
+
+            
+            
             
         </form>
         
@@ -173,6 +182,7 @@
         <p style="color: white;">Don't have an account? <input type="button" value="Sign Up" class="signupbtn" onclick="window.location.href='signup.html'"></input></p>
 
     </div>
+
 
     
 </body>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <link rel="icon" type="png"  href="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+</head>
+
+<style>
+
+    body{
+        background-image: url(https://preview.redd.it/clean-black-wallpaper-1920x1080-v0-3764zpt69h891.jpg?width=1080&crop=smart&auto=webp&s=593e47425f2e47fdabb4a4672d1ccb568ee1a954);
+
+            background-size: cover;
+           
+
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background: linear-gradient(34deg, rgb(0, 0, 0) 50%, rgb(56, 56, 56) 100%);
+        border-radius: 10px;
+        height: 60px;
+        
+    }
+
+    
+
+    a{
+        text-decoration: none;
+        color: white;
+        padding: 30px;
+        margin: 30px;
+        
+    }
+
+    h2{
+        color: white;
+        text-align: left;
+        font-size: 30px;
+        font-family: "Lucida Handwriting", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+
+
+        
+    }
+
+    .loginbtn{
+      
+        background: linear-gradient(34deg, rgb(0, 0, 0) 50%, rgb(56, 56, 56) 100%);
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 10px;
+       
+    }
+
+
+    footer{
+        background: linear-gradient(34deg, rgb(0, 0, 0) 50%, rgb(56, 56, 56) 100%);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 20px;
+      
+        
+    }
+
+    .footpara{
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .icon{
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+        
+       
+
+
+        
+        
+
+    }
+
+    .foottext{
+        color: white;
+        text-align: left;
+        font-size: 40px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        font-family: 'Roboto', sans-serif;
+        padding: 10px;
+        margin: 10px;
+    }
+
+
+    a:link {
+      text-decoration: none;
+      color: white;
+      padding: 30px;
+      margin: 30px; 
+    }
+
+    a:visited { 
+      color: lightgray; 
+    }
+
+    a:hover { 
+      color: rgb(129, 119, 119); 
+      text-decoration: underline; 
+    }
+
+    a:active {  
+      color: white;  
+      background-color: rgb(0, 0, 0);  
+      border-radius: 10px;  
+    }
+
+    .mainhead{
+        color: white;
+        text-align: left;
+        font-size: 30px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        font-family: "Lucida Handwriting", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    .listdiv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .navbarcontext{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 10px;
+        margin: 10px;
+        font-size: 20px;
+
+    }
+
+    .navbarcontext a {
+
+        text-decoration: none;
+        padding: 10px; 
+        margin: 0; 
+        
+      }
+
+    .icon a:hover img {
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)); 
+      }
+    
+    
+      .bugsdiv {
+        display: flex;        
+        align-items: flex-start; 
+        position: relative;      
+        margin-top: 50px;      
+      }
+    
+      .bugsh1 {
+        color: white;       
+        font-size: 48px;
+        font-weight: 600;
+        position: absolute; 
+        left: 80px;        
+      
+      }
+
+      
+      .bugs { 
+        background-color: rgba(0, 0, 0, 0.7); 
+        color: white;
+        padding: 20px; 
+        margin-left: 30px; 
+        border-radius: 10px; 
+        width: 50%;       
+        margin: auto;
+      }
+
+      .bugsa {
+        position: relative;
+        display: block;     
+        margin: 0 auto;     
+      }
+
+        .bugsimage {
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); 
+            margin-top: 50px;;
+        }
+
+        .duffydiv {
+            display: flex;          
+            align-items: flex-start; 
+            position: relative;      
+            margin-top: 50px;      
+          }
+        
+          .duffyh1 {
+            color: white;       
+            font-size: 48px;
+            font-weight: 600;
+            position: absolute; 
+            left: 1000px;        
+          
+          }
+    
+          
+          .duffy { 
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white;
+            padding: 20px; 
+            margin-left: 30px; 
+            border-radius: 10px; 
+            width: 50%;        
+            margin: auto;
+          }
+    
+          .duffya {
+            position: relative; 
+            display: block;     
+            margin: 0 auto;     
+          }
+    
+            .duffyimage {
+                border-radius: 10px; 
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); 
+                margin-top: 50px;;
+            }
+      
+
+            .loladiv {
+                display: flex;           
+                align-items: flex-start; 
+                position: relative;      
+                margin-top: 50px;      
+              }
+            
+              .lolah1 {
+                color: white;       
+                font-size: 48px;
+                font-weight: 600;
+                position: absolute; 
+
+                left: 80px;         
+                 
+              }
+        
+              
+              .lola { 
+                background-color: rgba(0, 0, 0, 0.7); 
+                color: white;
+                padding: 20px; 
+                margin-left: 30px; 
+                border-radius: 10px; 
+                width: 50%;        
+                margin: auto;
+              }
+        
+              .lolaa {
+                position: relative; 
+                display: block;     
+                margin: 0 auto;     
+              }
+        
+                .lolaimage {
+                    border-radius: 10px; 
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); 
+                    margin-top: 50px;;
+                }
+
+                .footnavpara{
+                    display: inline-flex;
+                    width: 800px;
+                    align-items: right;
+                    padding: 10px;
+                    margin: 10px;
+                    font-size: 20px;
+                    text-align: center;
+                    
+                    margin-left: 300px;
+
+                  
+                    background: rgba(0, 0, 0, 0.5);
+                    backdrop-filter: blur(5px);
+                    border-radius: 10px;
+                    padding: 20px;
+
+
+                }
+
+                .footpara2{
+                    color: white;
+                    text-align: center;
+                    font-size: 20px;
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                .loonay{
+                    color: white;
+                    text-align: center;
+                    font-size: 30px;
+                    font-family: 'Roboto', sans-serif;
+                }
+
+                
+
+
+                
+                .icon a { 
+                    display: inline-block; 
+                    padding-bottom: 5px;   
+                    border-bottom: 2px solid #ccc; 
+                }
+                
+
+
+    
+</style>
+ 
+<body>
+    <nav class="navbar">
+        <a href="none.html">
+        <img src="https://freepngimg.com/save/117606-bugs-bunny-png-file-hd/1024x1660" alt="logo" width="75" height="80">
+        </a>
+        <h2 class="mainhead">Buzzy</h2>
+        <div class="listdiv">
+            <a href="none.html" id="l1">Home</a>
+            <a href="none.html">About</a>
+            <a href="none.html">Contact</a>
+            <a href="none.html">Services</a>
+        </div>
+        <input type="button" value="Login" id="login" class="loginbtn" onclick="window.location.href='task2.html'">
+        
+    </nav>
+
+
+    <div class="bugsdiv">
+        <h1 class="bugsh1">
+            Bugs Bunny
+        </h1>
+        
+        <a href="none.html" class="bugsa">
+            <img src="https://media.artsper.com/artwork/1565772_1_l.jpg" alt="Bugs" width="300" height="300" class="bugsimage">
+        </a>
+        <p class="bugs">
+            Bugs Bunny is an animated cartoon character, created in the late 1930s by Leon Schlesinger Productions (later Warner Bros. Cartoons) and voiced originally by Mel Blanc. Bugs is best known for his starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros. Though a similar character called Happy Rabbit debuted in the WB cartoon Porky's Hare Hunt (1938) and appeared in a few subsequent shorts, the definitive character of Bugs is widely considered to have made his first appearance in Tex Avery's Oscar-nominated film A Wild Hare (1940).
+        </p>
+    </div>
+
+
+
+
+    <div class="duffydiv">
+        <p class="duffy">
+            Duffy Duck is an animated cartoon character, created in the late 1930s by Leon Schlesinger Productions (later Warner Bros. Cartoons) and voiced originally by Mel Blanc. Duffy is best known for his starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros. Though a similar character called Happy Rabbit debuted in the WB cartoon Porky's Hare Hunt (1938) and appeared in a few subsequent shorts, the definitive character of Duffy is widely considered to have made his first appearance in Tex Avery's Oscar-nominated film A Wild Hare (1940).
+        </p>
+        <a href="none.html" class="duffya">
+            <img src="https://i.pinimg.com/originals/f6/9e/96/f69e96144a491eb4099d596145b1bfc7.jpg" alt="Duffy" width="300" height="300" class="duffyimage">
+        </a>
+        <h1 class="duffyh1">
+            Duffy Duck
+        </h1>
+
+    </div>
+
+
+    <div class="loladiv">
+        <h1 class="lolah1">
+            Lola Bunny
+        </h1>
+        
+        <a href="none.html" class="lolaa">
+            <img src="https://i.kym-cdn.com/photos/images/original/002/030/371/fbb" alt="Lola" width="300" height="300" class="lolaimage">
+        </a>
+        <p class="lola">
+            Lola Bunny is an animated cartoon character, created in the late 1930s by Leon Schlesinger Productions (later Warner Bros. Cartoons) and voiced originally by Mel Blanc. Lola is best known for her starring roles in the Looney Tunes and Merrie Melodies series of animated short films, produced by Warner Bros. Though a similar character called Happy Rabbit debuted in the WB cartoon Porky's Hare Hunt (1938) and appeared in a few subsequent shorts, the definitive character of Lola is widely considered to have made her first appearance in Tex Avery's Oscar-nominated film A Wild Hare (1940).
+        </p>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <h2 class="foottext">Buzzy</h2>
+
+        <div class="navbarcontext">
+            <a href="none.html">Home</a>
+            <a href="none.html">About</a>
+            <a href="none.html">Contact</a>
+            <a href="none.html">Services</a>
+            
+        </div>
+        
+        <div class="footnavpara">
+            
+            <p class="footpara2">
+                
+                <b>Looney Tunes</b> is a successful American animated franchise produced and distributed by Warner Bros. It began as a series of short films that originally ran from 1930 to 1969, concurrently with its partner series Merrie Melodies, during the golden age of American animation. Following a revival in the late 1970s, new shorts were released as recently as 2014. The two series introduced a large cast of characters, including Bugs Bunny, Daffy Duck, and Porky Pig. The term Looney Tunes has since been expanded to also refer to the characters themselves.
+
+            </p>
+        </div>
+        
+        <div class="icon" >
+          
+            <a class="insta" href="none.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="instagram" width="50" height="50"></a>
+            <a href="none.html"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="facebook" width="50" height="50"></a>
+            <a href="none.html"><img src="https://cdn-icons-png.flaticon.com/512/733/733590.png" alt="instagram" width="50" height="50"></a>
+            <a href="none.html"><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" alt="x" width="50" height="50"></a>
+        </div>
+        <div class="maincontent">
+            <p class="footpara">
+                Buzzy is a website that provides you with the latest news and updates on the latest trends of Looney Tunes.
+            </p>
+        </div>
+        <p class="footpara">&copy; 2024 Buzzy. All rights reserved.</p>
+       
+    </footer>
+    
+</body>
+</html>
